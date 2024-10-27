@@ -127,8 +127,7 @@ const PORT = process.env.PORT || 8000;
 
 app.get("/", (req, res) => {
     res.status(200).json({
-        message: 'Failed to log event',
-        error: "bhai"
+        message: 'Working!',
     });
 })
 
