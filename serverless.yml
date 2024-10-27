@@ -1,0 +1,19 @@
+service: express-lambda-proxy
+
+provider:
+    name: aws
+    runtime: nodejs18.x
+    region: ap-south-1
+
+functions:
+    app:
+        handler: index.handler
+        events:
+            - httpApi: '*'
+
+plugins:
+    - serverless-offline
+
+package:
+    exclude:
+        - node_modules/**
